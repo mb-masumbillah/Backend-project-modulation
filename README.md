@@ -12,43 +12,49 @@
 ├── 📄 tsconfig.json
 ├── 📄 README.md
 ├── 📂 src/
-│ ├── 📂 app/
-│ │ ├── 📂 middleware/
-│ │ │ ├── 📄 auth.middleware.ts
-│ │ │ ├── 📄 globalErrorHandler.ts
-│ │ │ ├── 📄 notFound.ts
-│ │ │ └── 📄 request.ts
-│ │ ├── 📂 router/
-│ │ │ ├── 📄 index.ts
-│ │ │ ├── 📄 routes.ts
-│ │ ├── 📂 utils/
-│ │ │ ├── 📄 catchAsync.ts
-│ │ │ └── 📄 sendResponse.ts
-│ │ ├── 📄 app.ts
-│ │ └── 📄 server.ts
-│ ├── 📂 Builder/
-│ │ ├── 📄 QueryBuilder.ts
-│ ├── 📂 config/
-│ │ └── 📄 index.ts
-│ ├── 📂 Errors/
-│ │ ├── 📄 ApiError.ts
-│ │ ├── 📄 handleMongooseCastError.ts
-│ │ ├── 📄 handleMongooseError.ts
-│ │ ├── 📄 handleValidationError.ts
-│ │ └── 📄 handleZodError.ts
-│ ├── 📂 interface/
-│ │ ├── 📄 global.interface.ts
-│ │ └── 📄 index.ts
-│ ├── 📂 modules/
-│ │ └── 📂 Auth/
-│ │ ├── 📄 auth.constant.ts
-│ │ ├── 📄 auth.interface.ts
-│ │ ├── 📄 auth.model.ts
-│ │ ├── 📄 auth.route.ts
-│ │ ├── 📄 auth.service.ts
-│ │ ├── 📄 auth.util.ts
-│ │ └── 📄 index.ts
-│ └── 📄 index.ts
+│    ├── 📂 app/
+│    │    ├── 📂 Builder/
+│    │    │    └── 📄 QueryBuilder.ts    # এখানে class দিয়ে search,filter,pagination,sort,field করা হয় 
+│    │    │
+│    │    ├── 📂 config/
+│    │    │    └── 📄 dotenv.index.ts     # .env file এ রাখা সকল ডাটা এখানে আসবে , then সব জায়গায় যাবে 
+│    │    │
+│    │    ├── 📂 Errors/                  # এই Error গুলো সব globalErrorHandler file এ যাবে 
+│    │    │    ├── 📄 AppError.ts
+│    │    │    ├── 📄 handleMongooseCastError.ts
+│    │    │    ├── 📄 handleMongooseError.ts
+│    │    │    ├── 📄 handleValidationError.ts
+│    │    │    └── 📄 handleZodError.ts
+│    │    │
+│    │    ├── 📂 interface/
+│    │    │    ├── 📄 global.interface.ts
+│    │    │    └── 📄 index.d.ts
+│    │    │
+│    │    └── 📂 modules/
+│    │      └── 📂 Auth/
+│    │           ├── 📄 auth.constant.ts
+│    │           ├── 📄 auth.controller.ts
+│    │           ├── 📄 auth.interface.ts
+│    │           ├── 📄 auth.model.ts
+│    │           ├── 📄 auth.route.ts
+│    │           ├── 📄 auth.service.ts
+│    │           └── 📄 auth.util.ts
+│    │
+│    ├── 📂 middleware/
+│    │     ├── 📄 auth.ts
+│    │     ├── 📄 globalErrorHandler.ts    # Errors ফাইল থেকে সব Error এই ফাইল এ আসবে 
+│    │     ├── 📄 notFound.ts
+│    │     └── 📄 validationRequest.ts
+│    │
+│    ├── 📂 router/
+│    │     └── 📄 router.index.ts    # This file will be connect modules in all "Route"  
+│    │
+│    ├── 📂 utils/
+│    │     ├── 📄 catchAsync.ts     # This file will be used in all "controllers"
+│    │     └── 📄 sendResponse.ts   # controller থেকে সব Response এই ফাইলে পাঠাবে 
+│    │
+│    ├── 📄 app.ts     # main file
+│    └── 📄 server.ts  # Mongooes connect
 ```
 
 ## 🚀 Setup and Installation
