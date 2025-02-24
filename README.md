@@ -65,6 +65,8 @@
 ## Setup and Installation
 
 1.  **Project For Installation**:
+
+    ```bash
         npm init -y
         npm i express cors dotenv mongoose
         npm install --save-dev typescript 
@@ -75,6 +77,4 @@
         npm install --save-dev prettier
         npm install --save-dev eslint-config-prettier
         npm i @types/cors @types/express @types/node 
-    ```bash
-    
     ```
