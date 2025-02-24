@@ -62,18 +62,23 @@
 **1️⃣ Project Initialization**:
 
     ```bash
+
         npm init -y
+
     ```
 
 **2️⃣ Install Required Packages**:
 
     ```bash
+
         npm i express cors dotenv mongoose
+
     ```
 
 **3️⃣ Setup TypeScript**:
 
     ```bash
+
         npm install --save-dev typescript
         tsc --init
         npm i ts-node-dev --save-dev
@@ -83,6 +88,7 @@
 **4️⃣ Setup ESLint and Prettier**:
 
     ```bash
+
         npm install eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin --save-dev
         npx eslint --init
         npm install --save-dev prettier
@@ -93,5 +99,7 @@
 **5️⃣ Install Type Definitions**:
 
     ```bash
+
        npm i @types/cors @types/express @types/node
+       
     ```
