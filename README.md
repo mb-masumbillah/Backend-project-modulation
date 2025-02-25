@@ -100,6 +100,6 @@
 
     ```bash
 
-        npm i @types/cors @types/express @types/node
-
+        npm install --save-dev @types/cors @types/express @types/node
+        
     ```
